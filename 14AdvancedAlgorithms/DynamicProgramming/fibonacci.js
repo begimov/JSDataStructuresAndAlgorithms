@@ -11,7 +11,7 @@ function dynFib(n) {
     if (n == 1 || n == 2) {
         return 1;
     }
-    
+
     var val = [];
     val[1] = 1;
     val[2] = 1;
@@ -22,3 +22,13 @@ function dynFib(n) {
 
     return val[n];
 }
+
+var start = new Date().getTime();
+console.log(recurFib(30));
+var stop = new Date().getTime();
+console.log('recursive: ' + (stop - start));
+
+start = new Date().getTime();
+console.log(recurFib(30));
+stop = new Date().getTime();
+console.log('dynamic: ' + (stop - start));
