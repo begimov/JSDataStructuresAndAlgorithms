@@ -5,3 +5,8 @@ function HashTable() {
     this.put = put;
     this.get = get;
 }
+
+function put(data) {
+    var pos = this.simpleHash(data);
+    this.table[pos] = data;
+}
