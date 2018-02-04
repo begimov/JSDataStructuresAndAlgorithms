@@ -3,7 +3,7 @@ function HashTable() {
     this.simpleHash = simpleHash;
     this.showDistro = showDistro;
     this.put = put;
-    this.get = get;
+    // this.get = get;
 }
 
 function put(data) {
@@ -17,4 +17,13 @@ function simpleHash(data) {
         total += data.charCodeAt(i);
     }
     return total % this.table.length;
+}
+
+function showDistro() {
+    var n = 0;
+    for (var i = 0; i < this.table.length; i++) {
+        if (this.table[i] != undefined) {
+            console.log(i + ': ' + this.table[i]);
+        }
+    }
 }
