@@ -7,8 +7,7 @@ function HashTable() {
 }
 
 function put(data) {
-    var pos = this.simpleHash(data);
-    this.table[pos] = data;
+    this.table[this.simpleHash(data)] = data;
 }
 
 function simpleHash(data) {
@@ -20,7 +19,6 @@ function simpleHash(data) {
 }
 
 function showDistro() {
-    var n = 0;
     for (var i = 0; i < this.table.length; i++) {
         if (this.table[i] != undefined) {
             console.log(i + ': ' + this.table[i]);
