@@ -12,6 +12,7 @@ function show() {
 function BST() {
     this.root = null;
     this.insert = insert;
+    this.recursiveInsert = recursiveInsert;
     // this.inOrder = inOrder;
 }
 
@@ -43,4 +44,34 @@ function insert(data) {
             }
         }
     }    
+}
+
+function recursiveInsert(data) {
+    var n = new Node(data, null, null);
+
+    function iter(subtree) {
+        var parent = subtree;
+            if (data < subtree.data) {
+                subtree = subtree.left;
+                if (subtree == null) {
+                    parent.left = n;
+                    return;
+                }
+            }
+            else {
+                subtree = subtree.right;
+                if (subtree == null) {
+                    parent.right = n;
+                    return;
+                }
+            }
+        iter(subtree);
+    }
+
+    if (this.root == null) {
+        this.root = n;
+    } 
+    else {
+        iter(this.root);
+    }
 }
