@@ -13,7 +13,7 @@ function BST() {
     this.root = null;
     this.insert = insert;
     this.recursiveInsert = recursiveInsert;
-    // this.inOrder = inOrder;
+    this.inOrder = inOrder;
 }
 
 function insert(data) {
@@ -73,5 +73,13 @@ function recursiveInsert(data) {
     } 
     else {
         iter(this.root);
+    }
+}
+
+function inOrder(node) {
+    if (!(node == null)) {
+        inOrder(node.left);
+        console.log(node.show() + " ");
+        inOrder(node.right);
     }
 }
