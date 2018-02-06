@@ -42,3 +42,7 @@ function remove(element) {
     }
     return false;
 }
+
+function length() {
+    return this.listSize;
+}
