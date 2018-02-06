@@ -26,7 +26,7 @@ function showGraph() {
     for (var i = 0; i < this.vertices; i++) {
         for (var j = 0; j < this.vertices; j++) {
             if (this.adj[i][j] != undefined) {
-                console.log(i + ':' + j + ':' + this.adj[i][j]);
+                console.log(i + '->' + this.adj[i][j]);
             }
         }
     }
