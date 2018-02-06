@@ -13,11 +13,21 @@ function Graph(v) {
     }
 
     this.addEdge = addEdge;
-    this.toString = toString;
+    this.showGraph = showGraph;
 }
 
 function addEdge(v, w) {
     this.adj[v].push(w);
     this.adj[w].push(v);
     this.edges++;
+}
+
+function showGraph() {
+    for (var i = 0; i < this.vertices; i++) {
+        for (var j = 0; j < this.vertices; j++) {
+            if (this.adj[i][j] != undefined) {
+                console.log(i + ':' + j + ':' + this.adj[i][j]);
+            }
+        }
+    }
 }
