@@ -32,3 +32,13 @@ function find(element) {
         return -1;
     }
 }
+
+function remove(element) {
+    var foundElementIndex = this.find(element);
+    if (foundElementIndex > -1) {
+        this.dataStore.splice(foundElementIndex, 1);
+        --this.listSize;
+        return true;
+    }
+    return false;
+}
