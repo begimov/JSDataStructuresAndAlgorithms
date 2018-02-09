@@ -15,3 +15,11 @@ function enqueue(element) {
 function dequeue() {
     return this.dataStore.shift();
 }
+
+function front() {
+    return this.dataStore[0];
+}
+
+function back() {
+    return this.dataStore[this.dataStore.length - 1];
+}
