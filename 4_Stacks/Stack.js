@@ -21,3 +21,7 @@ function peek() {
 function length() {
     return this.top;
 }
+
+function clear() {
+    this.top = 0;
+}
