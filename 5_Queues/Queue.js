@@ -23,3 +23,12 @@ function front() {
 function back() {
     return this.dataStore[this.dataStore.length - 1];
 }
+
+function toString() {
+    var retStr = "";
+
+    for (var i = 0; i < this.dataStore.length; ++i) {
+        retStr += this.dataStore[i] + "\n";
+    }
+    return retStr;
+}
