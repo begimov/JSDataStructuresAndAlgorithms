@@ -13,3 +13,11 @@ function push(element) {
 function pop() {
     return this.dataStore[--this.top];
 }
+
+function peek() {
+    return this.dataStore[this.top - 1];
+}
+
+function length() {
+    return this.top;
+}
