@@ -68,3 +68,12 @@ function clear() {
     this.dataStore = [];
     this.listSize = this.pos = 0;
 }
+
+function contains(element) {
+    for (let i = 0; i < this.dataStore.length; i++) {
+        if (this.dataStore[i] == element) {
+            return true;
+        }
+    }
+    return false;
+}
